@@ -118,6 +118,15 @@ if (heroBtnGuide) {
   });
 }
 
+// Guide step 5 link directs to resources page
+const guideResourcesLink = document.getElementById('guide-resources-link');
+if (guideResourcesLink) {
+  guideResourcesLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigateToPage('page-resources');
+  });
+}
+
 
 // --- 2. DARK/LIGHT THEME SWITCHER ---
 function initTheme() {
