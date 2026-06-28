@@ -245,6 +245,11 @@
           <div class="feedback-box" id="feedback-inscription"></div>
         </form>
       </div>
+      <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+        La liste des services disponibles ainsi que leurs guides d'utilisation détaillés sont consultables dans notre espace 
+        <a href="#" id="register-docs-link" style="color: var(--primary); font-weight: 600; text-decoration: underline; transition: color 0.2s ease;">Ressources & Documentation</a>. 
+        Pour vous connecter, accédez directement au portail <a href="https://bonap.kluft.ovh" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 600; text-decoration: underline; transition: color 0.2s ease;">Bonapp</a>.
+      </p>
     </section>
 
     <!-- 3. PAGE RESSOURCES (DOCUMENTATION) -->
@@ -276,9 +281,19 @@
         <article class="resources-content card" id="doc-content">
           <!-- Bonapp Documentation -->
           <div class="doc-page active" id="doc-bonapp">
-            <div class="doc-header">
-              <h2>Bonapp - Gestionnaire de Recettes</h2>
-              <p class="doc-subtitle">Découvrez comment utiliser au mieux le service de gestion culinaire Bonapp.</p>
+            <div class="doc-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 1.25rem; margin-bottom: 1.5rem;">
+              <div>
+                <h2>Bonapp - Gestionnaire de Recettes</h2>
+                <p class="doc-subtitle" style="margin-top: 0.25rem;">Découvrez comment utiliser au mieux le service de gestion culinaire Bonapp.</p>
+              </div>
+              <a href="https://bonap.kluft.ovh" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: auto; padding: 0.5rem 1rem; font-size: 0.9rem; text-decoration: none; border-radius: 8px; box-shadow: 0 2px 6px rgba(245, 158, 11, 0.15);">
+                <span>Accéder à Bonapp</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
             </div>
 
             <div class="doc-section">
@@ -316,6 +331,72 @@
                   <span class="screenshot-title">bonap.kluft.ovh/explore</span>
                 </div>
                 <img src="/src/assets/bonapp_import.png" alt="Capture d'écran de l'explorateur de recettes dans Bonapp" class="screenshot-img">
+              </div>
+            </div>
+
+            <!-- New Divider line -->
+            <hr style="border: 0; border-top: 1px solid var(--card-border); margin: 2.5rem 0;">
+
+            <div class="doc-section">
+              <h3 style="color: var(--primary); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Créer une recette manuellement (de A à Z)</h3>
+              <p>
+                Si vous possédez votre propre recette de famille ou une création originale qui n'est pas publiée sur internet, vous pouvez l'ajouter manuellement pour la conserver dans votre carnet numérique et l'ajouter à vos menus.
+              </p>
+
+              <div class="stepper doc-stepper" style="margin-top: 1.5rem;">
+                <div class="step">
+                  <div class="step-num">1</div>
+                  <div class="step-title">Lancer la création</div>
+                  <div class="step-desc">
+                    Cliquez sur l'onglet <strong>"Recettes"</strong> dans la navigation latérale gauche de Bonapp, puis cliquez sur le bouton orange <strong>"Nouvelle recette"</strong> situé en haut à droite.
+                  </div>
+                </div>
+
+                <!-- Screenshot 1 -->
+                <div class="screenshot-container" style="margin: 1rem 0 2rem 0;">
+                  <div class="screenshot-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="screenshot-title">bonap.kluft.ovh/recipes</span>
+                  </div>
+                  <img src="/src/assets/bonapp_new_btn.png" alt="Bouton Nouvelle Recette sur Bonapp" class="screenshot-img">
+                </div>
+                
+                <div class="step">
+                  <div class="step-num">2</div>
+                  <div class="step-title">Remplir les détails généraux</div>
+                  <div class="step-desc">
+                    Saisissez le nom de la recette, choisissez la ou les saisons idéales, les temps de préparation/cuisson, et rédigez une description. Vous pouvez également cliquer sur l'encadré supérieur pour téléverser une photo d'illustration.
+                  </div>
+                </div>
+                
+                <div class="step">
+                  <div class="step-num">3</div>
+                  <div class="step-title">Ajouter les ingrédients et les étapes</div>
+                  <div class="step-desc">
+                    Renseignez vos ingrédients (quantité, unité, nom, notes) et rédigez les instructions étape par étape. Cliquez sur <strong>"+ Ajouter"</strong> sous chaque section pour créer de nouveaux champs.
+                  </div>
+                </div>
+
+                <div class="step">
+                  <div class="step-num">4</div>
+                  <div class="step-title">Sauvegarder</div>
+                  <div class="step-desc">
+                    Cliquez sur le bouton <strong>"Créer la recette"</strong> en haut ou en bas pour l'enregistrer dans votre bibliothèque personnelle !
+                  </div>
+                </div>
+
+                <!-- Screenshot 2 -->
+                <div class="screenshot-container" style="margin: 1.5rem 0 0 0;">
+                  <div class="screenshot-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="screenshot-title">bonap.kluft.ovh/recipes/new</span>
+                  </div>
+                  <img src="/src/assets/bonapp_create_form.png" alt="Formulaire de création manuelle de recette sur Bonapp" class="screenshot-img">
+                </div>
               </div>
             </div>
           </div>

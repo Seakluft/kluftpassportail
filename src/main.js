@@ -91,6 +91,15 @@ if (guideRegisterLink) {
   });
 }
 
+// Inscription bottom link directs to resources docs
+const registerDocsLink = document.getElementById('register-docs-link');
+if (registerDocsLink) {
+  registerDocsLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigateToPage('page-resources');
+  });
+}
+
 
 // --- 2. DARK/LIGHT THEME SWITCHER ---
 function initTheme() {
