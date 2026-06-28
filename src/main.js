@@ -82,6 +82,15 @@ if (betaSupportLink) {
   });
 }
 
+// Guide registration link directs to registration form
+const guideRegisterLink = document.getElementById('guide-register-link');
+if (guideRegisterLink) {
+  guideRegisterLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigateToPage('page-register');
+  });
+}
+
 
 // --- 2. DARK/LIGHT THEME SWITCHER ---
 function initTheme() {
