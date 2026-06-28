@@ -109,15 +109,12 @@ if (heroBtnRegister) {
   });
 }
 
-// Hero guide button scrolls to guide container
+// Hero guide button directs to resources page
 const heroBtnGuide = document.getElementById('hero-btn-guide');
 if (heroBtnGuide) {
   heroBtnGuide.addEventListener('click', (e) => {
     e.preventDefault();
-    const targetEl = document.getElementById('homepage-guide');
-    if (targetEl) {
-      targetEl.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigateToPage('page-resources');
   });
 }
 
