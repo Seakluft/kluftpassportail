@@ -15,12 +15,8 @@
   <header>
     <div class="header-container">
       <a href="#" class="logo" id="logo-home" aria-label="Kluftpass Accueil">
-        <div class="logo-icon">
-          <!-- Shield/Key SVG icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-          </svg>
+        <div class="logo-icon-img-wrapper">
+          <img src="/src/assets/logo.png" alt="Kluftpass" class="logo-img-crop">
         </div>
         <span class="logo-text">KLUFT<span class="text-gradient">PASS</span></span>
         <span class="logo-tag">Beta</span>
@@ -54,8 +50,38 @@
     
     <!-- 1. PAGE ACCUEIL: TUTORIEL & SENSIBILISATION -->
     <section id="page-home" class="page active">
-      <h1>Un accès unique, une sécurité maximale</h1>
-      <p class="section-subtitle">Découvrez comment le Kluftpass protège vos comptes et configurez vos accès de manière hautement sécurisée.</p>
+      <!-- Hero Section with Screenshot -->
+      <div class="hero-section">
+        <div class="hero-text">
+          <h1 style="margin-bottom: 1rem; line-height: 1.15;">Un accès unique,<br><span class="text-gradient">une sécurité maximale</span></h1>
+          <p class="section-subtitle" style="margin-bottom: 2rem; max-width: 580px;">
+            Le Kluftpass est votre clé d'authentification unique (SSO via Pangolin) pour vous connecter de manière centralisée et hautement sécurisée à tous vos services.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" id="hero-btn-register" style="width: auto; padding: 0.9rem 2rem;">
+              <span>Créer mon accès</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+            <button class="nav-btn" id="hero-btn-guide" style="border: 1px solid var(--card-border); color: var(--text-color); background-color: var(--card-bg); padding: 0.8rem 1.5rem; border-radius: 12px; font-family: var(--font-heading); font-weight: 600; cursor: pointer; transition: all 0.2s ease;">
+              En savoir plus
+            </button>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="screenshot-container hero-screenshot">
+            <div class="screenshot-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="screenshot-title">auth.kluft.pass</span>
+            </div>
+            <img src="/src/assets/kluftpass_login.png" alt="Aperçu du portail de connexion Kluftpass" class="screenshot-img">
+          </div>
+        </div>
+      </div>
 
       <!-- Beta Warning Banner -->
       <article class="alert-box beta" aria-label="Avertissement Phase de Test">
@@ -74,7 +100,7 @@
         </div>
       </article>
 
-      <div class="guide-container">
+      <div class="guide-container" id="homepage-guide">
         <!-- Step-by-Step Guide -->
         <article class="card">
           <div class="card-title-icon">

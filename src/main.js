@@ -100,6 +100,27 @@ if (registerDocsLink) {
   });
 }
 
+// Hero registration button directs to registration page
+const heroBtnRegister = document.getElementById('hero-btn-register');
+if (heroBtnRegister) {
+  heroBtnRegister.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigateToPage('page-register');
+  });
+}
+
+// Hero guide button scrolls to guide container
+const heroBtnGuide = document.getElementById('hero-btn-guide');
+if (heroBtnGuide) {
+  heroBtnGuide.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetEl = document.getElementById('homepage-guide');
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
+
 
 // --- 2. DARK/LIGHT THEME SWITCHER ---
 function initTheme() {
@@ -218,10 +239,9 @@ strengthInput.addEventListener('input', () => {
       break;
   }
   
-  // Special check for robust base + suffix strategy (e.g. CasseroleArbuste48!Bonapp)
   if (password.length >= 22 && hasUpper && hasLower && hasDigit && hasSpecial) {
     statusText = 'Parfait & Unique !';
-    color = '#0ea5e9'; // Blue / Premium Accent
+    color = '#06b6d4'; // Cyan / Brand Accent
     estimatedTime = 'Inviolable (Éternité) 💎';
   }
   
