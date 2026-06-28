@@ -73,6 +73,15 @@ footerSupportLink.addEventListener('click', (e) => {
   navigateToPage('page-support');
 });
 
+// Beta warning banner support link directs to support
+const betaSupportLink = document.getElementById('beta-support-link');
+if (betaSupportLink) {
+  betaSupportLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigateToPage('page-support');
+  });
+}
+
 
 // --- 2. DARK/LIGHT THEME SWITCHER ---
 function initTheme() {
