@@ -360,13 +360,39 @@ function showFeedback(element, message, type) {
 }
 
 
-// --- 8. INITIALIZATION ---
+// --- 8. RESOURCES DOC SWITCHING ---
+function initResourcesDocSwitch() {
+  const docButtons = document.querySelectorAll('.resource-menu-btn');
+  const docPages = document.querySelectorAll('.doc-page');
+
+  docButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetDocId = btn.getAttribute('data-doc');
+      
+      docButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      docPages.forEach(page => {
+        if (page.id === targetDocId) {
+          page.classList.add('active');
+        } else {
+          page.classList.remove('active');
+        }
+      });
+    });
+  });
+}
+
+
+// --- 9. INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initServicesDropdown();
+  initResourcesDocSwitch();
 });
 // Execute immediately as well if DOMContentLoaded already fired (for Vite environment)
 if (document.readyState === 'interactive' || document.readyState === 'complete') {
   initTheme();
   initServicesDropdown();
+  initResourcesDocSwitch();
 }

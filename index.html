@@ -30,6 +30,7 @@
         <nav aria-label="Navigation principale">
           <button class="nav-btn active" id="btn-home" data-target="page-home">Guide & Sécurité</button>
           <button class="nav-btn" id="btn-register" data-target="page-register">Inscription</button>
+          <button class="nav-btn" id="btn-resources" data-target="page-resources">Ressources</button>
           <button class="nav-btn" id="btn-support" data-target="page-support">Support</button>
         </nav>
         
@@ -243,6 +244,82 @@
 
           <div class="feedback-box" id="feedback-inscription"></div>
         </form>
+      </div>
+    </section>
+
+    <!-- 3. PAGE RESSOURCES (DOCUMENTATION) -->
+    <section id="page-resources" class="page">
+      <h1>Ressources & Guides</h1>
+      <p class="section-subtitle">Retrouvez les guides et documentations d'utilisation de nos différents services.</p>
+
+      <div class="resources-layout">
+        <!-- Sidebar Navigation for Documentation -->
+        <aside class="resources-sidebar card">
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Services</h3>
+          <ul class="resources-menu">
+            <li>
+              <button class="resource-menu-btn active" data-doc="doc-bonapp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 0 0-3 3v7a4 4 0 0 0 3-3c2 0 4 1.33 6 4 2-2.67 4-4 6-4a4 4 0 0 0 3 3v-7a4 4 0 0 0-3-3c-2 0-4 1.33-6 4Z"/>
+                </svg>
+                Bonapp (Mealie)
+              </button>
+            </li>
+            <!-- Placeholder for future docs -->
+            <li class="menu-disabled">
+              <span>Prochainement...</span>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Main Documentation Content -->
+        <article class="resources-content card" id="doc-content">
+          <!-- Bonapp Documentation -->
+          <div class="doc-page active" id="doc-bonapp">
+            <div class="doc-header">
+              <h2>Bonapp - Gestionnaire de Recettes</h2>
+              <p class="doc-subtitle">Découvrez comment utiliser au mieux le service de gestion culinaire Bonapp.</p>
+            </div>
+
+            <div class="doc-section">
+              <h3 style="color: var(--primary); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Comment importer une recette ?</h3>
+              <p>
+                L'une des fonctionnalités les plus pratiques de Bonapp est son importateur automatique. Plutôt que de recopier manuellement les ingrédients et les étapes d'une recette trouvée sur internet, le service s'occupe de l'extraire pour vous à partir d'un simple lien.
+              </p>
+
+              <div class="stepper doc-stepper" style="margin-top: 1.5rem;">
+                <div class="step">
+                  <div class="step-num">1</div>
+                  <div class="step-title">Accéder à l'explorateur</div>
+                  <div class="step-desc">Après vous être connecté à Bonapp, cliquez sur l'onglet <strong>"Explorer"</strong> dans la navigation latérale gauche.</div>
+                </div>
+                
+                <div class="step">
+                  <div class="step-num">2</div>
+                  <div class="step-title">Coller le lien de la recette</div>
+                  <div class="step-desc">Dans le champ sous l'intitulé <strong>"Importer depuis une URL"</strong>, collez le lien complet de la recette (depuis Marmiton, 750g, CuisineAZ, AllRecipes, etc.).</div>
+                </div>
+                
+                <div class="step">
+                  <div class="step-num">3</div>
+                  <div class="step-title">Lancer l'importation</div>
+                  <div class="step-desc">Cliquez sur le bouton orange <strong>"+ Importer"</strong>. En quelques secondes, la recette est analysée, mise en page et ajoutée à votre bibliothèque personnelle !</div>
+                </div>
+              </div>
+
+              <!-- Embedded screenshot -->
+              <div class="screenshot-container">
+                <div class="screenshot-header">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="screenshot-title">bonap.kluft.ovh/explore</span>
+                </div>
+                <img src="/src/assets/bonapp_import.png" alt="Capture d'écran de l'explorateur de recettes dans Bonapp" class="screenshot-img">
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
